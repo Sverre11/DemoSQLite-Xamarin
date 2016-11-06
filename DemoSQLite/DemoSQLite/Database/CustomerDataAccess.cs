@@ -28,7 +28,7 @@ namespace DemoSQLite.Database
         }
 
         private void AddNewCustomers()
-        {            
+        {
             List<Customers> list = new List<Customers>()
             {
                 new Customers(){CompanyName = "Company Name 1",Address = "Address 1",Country = "Country 1",},
@@ -43,7 +43,7 @@ namespace DemoSQLite.Database
                 //this.Customers.Add(customer);
                 _database.Insert(customer);
             }
-           
+
         }
 
         public IEnumerable<Customers> GetAll()
@@ -51,7 +51,7 @@ namespace DemoSQLite.Database
             lock (CollisionLock)
             {
                 var query = (from cust in _database.Table<Customers>()
-                            select cust).ToList();
+                             select cust).ToList();
                 return query;
             }
         }
@@ -64,8 +64,8 @@ namespace DemoSQLite.Database
             lock (CollisionLock)//Lock Collision to avoid Database Collision??
             {
                 var query = (from cust in _database.Table<Customers>()
-                            where cust.Country == countryName
-                            select cust);
+                             where cust.Country == countryName
+                             select cust);
                 return query.AsEnumerable();
             }
         }

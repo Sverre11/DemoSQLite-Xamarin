@@ -20,7 +20,7 @@ namespace DemoSQLite.ViewModels
         }
 
         private ObservableCollection<Customers> _cCollection = new ObservableCollection<Customers>();
-        public ObservableCollection<Customers> CCollection   
+        public ObservableCollection<Customers> CCollection
         {
             get { return _cCollection; }
             set { SetProperty(ref _cCollection, value); }
@@ -36,8 +36,8 @@ namespace DemoSQLite.ViewModels
             CustomerDataAccess db = new CustomerDataAccess();
             var x = db.GetAll();
 
-            
-            
+
+
 
 
             foreach (var c in x)

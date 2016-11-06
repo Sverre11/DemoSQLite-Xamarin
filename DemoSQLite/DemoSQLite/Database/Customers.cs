@@ -5,11 +5,11 @@ using SQLite;
 namespace DemoSQLite.Database
 {
     [Table("Customers")]
-    public class Customers:BindableBase
+    public class Customers : BindableBase
 
     {
         private int _id;
-        [PrimaryKey,AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int Id
         {
             get { return _id; }
@@ -32,7 +32,7 @@ namespace DemoSQLite.Database
             set { SetProperty(ref _address, value); }
         }
 
-        private string _country;        
+        private string _country;
         public string Country
         {
             get { return _country; }

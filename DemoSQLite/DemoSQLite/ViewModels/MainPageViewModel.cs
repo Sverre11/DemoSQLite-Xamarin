@@ -29,16 +29,28 @@ namespace DemoSQLite.ViewModels
         public MainPageViewModel()
         {
             TestDatabase();
+            //TestCalendar();
+        }
+
+        private void TestCalendar()
+        {
+            CalendarModel cm = new CalendarModel()
+            {
+                Title = "Jons Test",
+                Description = "Ett test av att skriva till Kalender",
+                Location = "Malmö",
+                Start = DateTime.Now,
+                End = DateTime.Now
+            };
+
+            CalendarAccess ca = new CalendarAccess(cm);
+            
         }
 
         private void TestDatabase()
         {
             CustomerDataAccess db = new CustomerDataAccess();
             var x = db.GetAll();
-
-
-
-
 
             foreach (var c in x)
             {

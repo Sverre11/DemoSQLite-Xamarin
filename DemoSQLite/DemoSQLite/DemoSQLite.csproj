@@ -35,9 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Database\CalendarAcces.cs" />
+    <Compile Include="Database\CalendarModel.cs" />
     <Compile Include="Database\CustomerDataAccess.cs" />
     <Compile Include="Database\Customers.cs" />
+    <Compile Include="Interface\ICalendar.cs" />
     <Compile Include="Interface\IDatabaseConnection.cs" />
+    <Compile Include="Interface\ILocalize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
